@@ -13,6 +13,8 @@ for x in arr:
     else:
         di[x] = 1
 print(di)
+if(r == 1):
+    print((di[1]*(di[1]-1)*(di[1]-2))//6)
 for k, v in di.items():
     if (k*r in di and k*r*r in di):
 
