@@ -1,7 +1,5 @@
 x = 2
 
-for i in range(x):
+for i in range(1, 2):
 
-    x += 1
-    divmod()
     print(x)

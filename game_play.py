@@ -1,7 +1,5 @@
 t = int(input(""))
-di{
-
-}
+di = {}
 for _ in range(t):
     n = int(input(""))
     l = []

@@ -1,26 +1,35 @@
 
 def abbreviation(a, b):
     l = []
-    l1 = []
+    l1 = {}
+    l2 = []
     for i in range(len(a)):
         if(a[i].isupper()):
             if(a[i] not in b):
                 return "NO"
             else:
-                l.append(b.index(a[i]))
+                y = b.index(a[i])
+                b[y] = 0
 
         else:
 
-            l1.append(a[i])
+            if(a[i] in l1):
+                l1[a[i]] += 1
+            else:
+                l1[a[i]] = 1
 
     for i in range(len(b)):
-        if(i in l):
+        if(b[i] == 0):
             continue
         x = b[i].lower()
-        print(x)
 
         if(x not in l1):
             return "NO"
+        else:
+            l1[x] -= 1
+            if(l1[x] == -1):
+                return "NO"
+
     return "YES"
 
 
