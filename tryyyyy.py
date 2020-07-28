@@ -1,2 +1,3 @@
-for i in range(10, 0, -1):
-    print(i)
+a=[int(x) for x in range(200)]
+del a[1:100]
+print(a)
